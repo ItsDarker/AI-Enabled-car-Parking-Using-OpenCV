@@ -3,10 +3,26 @@
 {% block title %}Car Parking System{% endblock %}
 
 {% block content %}
-    <h1>Welcome to Car Parking System</h1>
-    <p>Please log in or register to continue</p>
-    <ul>
-        <li><a href="{{ url_for('login') }}">Login</a></li>
-        <li><a href="{{ url_for('register') }}">Register</a></li>
-    </ul>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="text-center">Welcome to Car Parking System</h1>
+                    </div>
+                    <div class="card-body">
+                        <p class="lead text-center">Please log in or register to continue</p>
+                        <div class="row mt-5">
+                            <div class="col-md-6">
+                                <a href="{{ url_for('login') }}" class="btn btn-primary btn-block">Login</a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="{{ url_for('register') }}" class="btn btn-success btn-block">Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
